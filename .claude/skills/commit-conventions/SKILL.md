@@ -1,0 +1,43 @@
+---
+name: commit-conventions
+description: Use when committing, writing a commit message, or deciding how to split a change into commits. Defines when to commit, how small a commit is, and the exact subject and body format.
+---
+
+# Commit conventions
+
+## When to commit
+
+Commit only when asked. Never commit, push, or open a pull request as a side effect of finishing work.
+
+## One commit per logical change
+
+A change set is several small commits, never one large commit for a whole issue or pull request. Split by concern: the production code, its tests, a refactoring that made room for it, a documentation update, a dependency change. Each commit leaves the repository in a state that builds and passes its tests on its own, so any commit can be reviewed, reverted, or bisected alone.
+
+Order commits so each builds on the previous one: preparatory refactoring first, then the behavior, then tests if they are not in the same commit, then documentation.
+
+## Subject line
+
+- Lowercase throughout, including the first word and any proper noun that has a lowercase form.
+- Imperative mood: `add`, `remove`, `rename`, `fix`, not `added` or `adds`.
+- One line of at most seventy-two characters, no trailing period.
+- Says what the commit does, specifically: `add connection pooling to the order service`, not `update code` or `fixes`.
+- No prefix, tag, scope, or issue number in the subject. No abbreviations.
+
+Issue titles use the same subject style; the issue side is in `.claude/skills/issue-conventions/titles.md`.
+
+## Body
+
+Add a body when the subject cannot carry the reason. Separate it from the subject with one blank line, wrap it at seventy-two characters, and write plain prose that says why the change is made and what it replaces, not what the diff already shows. Reference the issue by number in the body, such as `part of #42`, never in the subject.
+
+## Example
+
+```text
+add connection pooling to the order service
+
+Each request opened its own database connection, which exhausted the
+database's connection limit under load. Use the pool from the client
+library already in use, with limits read from the service
+configuration.
+
+part of #42
+```
