@@ -1,6 +1,6 @@
 # GitHub issue workflow for Claude Code
 
-A reusable issue workflow you copy into a project. It gives you three GitHub issue forms, and Claude Code commands, agents, and skills that create issues which are ready to implement, work on them, and split them when they grow too wide. Its defining rule is that an issue is never created with a decision still open.
+A reusable issue workflow you copy into a project. It gives you three GitHub issue forms, and Claude Code commands, agents, and skills that create issues which are ready to implement, work on them, and split them when they grow too wide. It also carries the issue title and commit message conventions. Its defining rule is that an issue is never created with a decision still open.
 
 ## Install
 
@@ -44,11 +44,11 @@ Full rules and worked examples: [story.md](.claude/skills/issue-conventions/stor
 - Relationships are native. Story to Task is a real sub-issue link, blocking is a real blocked-by link, and no body ever says "Parent: #12".
 - No file lists. An issue says what must be true afterwards, never which files to touch.
 - Types are labels. An issue is a Story, Task, or Bug because it carries `type:story`, `type:task`, or `type:bug`, never because of its title.
-- Titles are lowercase, written like commit subjects.
+- Titles are lowercase, written like commit subjects. See [titles.md](.claude/skills/issue-conventions/titles.md).
 - One area per Task. Wider work is split, and a Task that cannot be split says why.
 - Stories are never worked on directly. The work happens in their Tasks.
 - Tests cover our own code, never framework or library behavior.
-- Commits are small, one per logical change, with lowercase subjects, and only when you ask.
+- Commits are small, one per logical change, with lowercase subjects, and only when you ask. See [commit-conventions](.claude/skills/commit-conventions/SKILL.md).
 
 The rules in full: [SKILL.md](.claude/skills/issue-conventions/SKILL.md) and [implementation-standards](.claude/skills/implementation-standards/SKILL.md).
 

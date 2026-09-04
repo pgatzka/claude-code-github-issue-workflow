@@ -29,8 +29,8 @@ An edit to a rule updates every place it appears.
 - Single-area rule: `task.md` in full; referenced in `agents/issue-splitter.md`, `commands/split-task.md`, `commands/work-on-issue.md`, `commands/create-issue.md`.
 - Testing rule: `implementation-standards/SKILL.md` in full; referenced in `agents/implementation-verifier.md` and `commands/work-on-issue.md`.
 - Type label rule, types are identified only by `type:story`, `type:task`, or `type:bug`: `issue-conventions/SKILL.md`, `labels.md`, the `labels` list of each form, `agents/issue-author.md`, `commands/work-on-issue.md`, `commands/split-task.md`.
-- Title rule, lowercase like a commit subject with no prefix: `issue-conventions/SKILL.md`; checked in `agents/issue-author.md`, `commands/create-issue.md`, `commands/split-task.md`; shown in every worked example.
-- Commit rule, several small commits with lowercase subjects and only when asked: `implementation-standards/SKILL.md`; referenced in `commands/work-on-issue.md`.
+- Title rule: `issue-conventions/titles.md` in full, pointed at from `issue-conventions/SKILL.md`; checked in `agents/issue-author.md`, `commands/create-issue.md`, `commands/split-task.md`; shown in every worked example.
+- Commit rule: `commit-conventions/SKILL.md` in full, which also defines the subject style that `titles.md` shares; pointed at from `implementation-standards/SKILL.md` and `commands/work-on-issue.md`.
 - Label taxonomy: `labels.md` only. Other files point at it and never list labels themselves, except the type labels, the always-applied `needs-triage`, and the `needs-information` step in `commands/work-on-issue.md`.
 
 ## Invariants that must survive any edit
@@ -39,7 +39,7 @@ An edit to a rule updates every place it appears.
 - No relationships as text. No form field, skeleton, or agent output for a parent, a blocker, or a related issue.
 - No file lists in issue bodies.
 - Issue type is carried by the type label only. No form sets a title, and no file identifies a type by a title prefix.
-- Titles are lowercase.
+- Titles and commit subjects are lowercase and prefix-free, and the subject style is defined once, in `commit-conventions/SKILL.md`.
 - The label set stays closed, and area labels are the only per-project part.
 - Labels are created on demand, never preemptively.
 - No abbreviations in any file, including labels, headings, and command names.
