@@ -48,7 +48,7 @@ Full rules and worked examples: [story.md](.claude/skills/issue-conventions/stor
 - One area per Task. Wider work is split, and a Task that cannot be split says why.
 - Stories are never worked on directly. The work happens in their Tasks.
 - Tests cover our own code, never framework or library behavior.
-- Commits are small, one per logical change, with lowercase subjects, and only when you ask. See [commit-conventions](.claude/skills/commit-conventions/SKILL.md).
+- Commits are small, one per logical change, with lowercase subjects and short but explanatory messages, and only when you ask. A pull request description adds only what the commits leave unsaid. See [commit-conventions](.claude/skills/commit-conventions/SKILL.md).
 
 The rules in full: [SKILL.md](.claude/skills/issue-conventions/SKILL.md) and [implementation-standards](.claude/skills/implementation-standards/SKILL.md).
 

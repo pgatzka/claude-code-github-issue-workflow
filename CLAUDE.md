@@ -30,7 +30,7 @@ An edit to a rule updates every place it appears.
 - Testing rule: `implementation-standards/SKILL.md` in full; referenced in `agents/implementation-verifier.md` and `commands/work-on-issue.md`.
 - Type label rule, types are identified only by `type:story`, `type:task`, or `type:bug`: `issue-conventions/SKILL.md`, `labels.md`, the `labels` list of each form, `agents/issue-author.md`, `commands/work-on-issue.md`, `commands/split-task.md`.
 - Title rule: `issue-conventions/titles.md` in full, pointed at from `issue-conventions/SKILL.md`; checked in `agents/issue-author.md`, `commands/create-issue.md`, `commands/split-task.md`; shown in every worked example.
-- Commit rule: `commit-conventions/SKILL.md` in full, which also defines the subject style that `titles.md` shares; pointed at from `implementation-standards/SKILL.md` and `commands/work-on-issue.md`.
+- Commit and pull request rule, small commits, short but explanatory messages, and pull request descriptions that add only what the commits leave unsaid: `commit-conventions/SKILL.md` in full, which also defines the subject style that `titles.md` shares; pointed at from `implementation-standards/SKILL.md` and `commands/work-on-issue.md`.
 - Label taxonomy: `labels.md` only. Other files point at it and never list labels themselves, except the type labels, the always-applied `needs-triage`, and the `needs-information` step in `commands/work-on-issue.md`.
 
 ## Invariants that must survive any edit
