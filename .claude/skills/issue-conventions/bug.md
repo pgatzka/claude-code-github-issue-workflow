@@ -69,7 +69,7 @@ Nothing else needs deciding. The cause, the location, and the fix are discovered
 
 Good:
 
-> **[Bug] Invoice total shows the wrong currency after switching accounts**
+> **invoice total shows the wrong currency after switching accounts**
 >
 > What is wrong: after switching from a euro account to a dollar account, the invoice page keeps showing amounts with the euro symbol.
 >
@@ -81,7 +81,7 @@ The steps can be followed by anyone, the expected behavior is concrete, and no c
 
 Should have been a different type:
 
-> **[Bug] Invoices should support pounds**
+> **invoices should support pounds**
 >
 > Actual behavior: only euro and dollar are available. Expected behavior: pounds are available too.
 

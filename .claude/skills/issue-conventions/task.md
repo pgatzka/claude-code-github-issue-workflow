@@ -56,7 +56,7 @@ How the code will be structured is not decided here. Neither is the cause of any
 
 Good:
 
-> **[Task] Add connection pooling to the order service database client**
+> **add connection pooling to the order service database client**
 >
 > The order service opens a new PostgreSQL connection per request. Switch it to the pool provided by the PostgreSQL client library already in use, with a minimum of two and a maximum of ten connections, and read those limits from the service configuration with those values as defaults.
 >
@@ -68,7 +68,7 @@ Every decision is made, every item is verifiable, and nothing names a file.
 
 Not ready:
 
-> **[Task] Set up database connection**
+> **set up database connection**
 >
 > Connect the service to a database. We should figure out whether to use PostgreSQL or MySQL and pick a client library.
 

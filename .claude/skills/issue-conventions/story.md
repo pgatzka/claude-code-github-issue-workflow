@@ -54,7 +54,7 @@ The technical approach is not decided here. It is decided when each Task is writ
 
 Good:
 
-> **[Story] Export the monthly usage report as a spreadsheet**
+> **export the monthly usage report as a spreadsheet**
 >
 > As an account manager, I want to download the monthly usage report as a spreadsheet, so that I can share it with clients who do not have access to the dashboard.
 >
@@ -66,11 +66,11 @@ Every criterion is observable by a user, and nothing says how the export is buil
 
 Written wrongly:
 
-> **[Story] Add spreadsheet export using the sheet-writer package**
+> **Add spreadsheet export using the sheet-writer package**
 >
 > As a user, I want spreadsheet export.
 >
 > - [ ] Add an export route to the reports controller.
 > - [ ] Tests pass.
 
-The user story names no outcome, the title and the first criterion prescribe a library and a route, and "tests pass" is a definition of done item rather than user-facing behavior. Corrected: the good Story above, with the library choice recorded as a decision in the Task that implements the export.
+The title is not lowercase, the user story names no outcome, the title and the first criterion prescribe a library and a route, and "tests pass" is a definition of done item rather than user-facing behavior. Corrected: the good Story above, with the library choice recorded as a decision in the Task that implements the export.
