@@ -31,7 +31,7 @@ Check off an item only when it is actually true and you have seen it be true. An
 
 ## Commits, when you are asked to commit
 
-Commit only when asked. When you are, make several small commits, one per logical change, such as one for the code, one for its tests, and one for documentation. Never squash a whole issue into a single commit. Each subject line is lowercase, imperative, one line, with no trailing period, the same style as issue titles.
+Commit only when asked. When you are, follow `.claude/skills/commit-conventions/SKILL.md`: several small commits, one per logical change, with lowercase subjects.
 
 ## When the issue left a decision unmade
 
