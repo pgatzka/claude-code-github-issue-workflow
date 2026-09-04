@@ -32,6 +32,8 @@ Read the matching file in full before writing any issue of that type. Each holds
 
 1. Relationships are real GitHub relationships, never prose. Never write "Parent: #12", "Blocked by #40", "Related to #7", or any similar line in an issue body. Story to Task is a native parent and sub-issue relationship. Blocking is a native blocked-by relationship. The commands below set both.
 2. No issue contains a list of files to change, lines to touch, functions to edit, or a prescribed code structure. What to change is the implementer's decision, not the planner's. If you find yourself writing a path into an issue body, stop.
+3. The type of an issue is identified only by its label: `type:story`, `type:task`, or `type:bug`. Every issue carries exactly one. Titles never carry a prefix or any other type marker.
+4. Titles are written like commit subjects: all lowercase, imperative, one line, no trailing period. For example `add connection pooling to the order service`.
 
 ## Labels
 
@@ -39,7 +41,7 @@ The label set is closed and documented in `labels.md`, together with the allowed
 
 ## Commands
 
-Verified against gh version 2.94.0. Titles carry the same prefix the issue forms use, `[Story] `, `[Task] `, or `[Bug] `, so issues created here and issues filed through the browser look the same. Labels passed to `gh issue create` must already exist.
+Verified against gh version 2.94.0. Every issue is created with its type label and `needs-triage`, which is what the issue forms apply, so issues created here and issues filed through the browser look the same. Labels passed to `gh issue create` must already exist.
 
 Check whether a label exists. Prints the name if it does, nothing otherwise:
 
@@ -56,13 +58,13 @@ gh label create "priority:high" --color ef6b5f --description "Should be worked o
 Create an issue from a body file that follows the type's skeleton:
 
 ```shell
-gh issue create --title "[Task] Add connection pooling to the order service" --body-file body.md --label "needs-triage" --label "area:backend"
+gh issue create --title "add connection pooling to the order service" --body-file body.md --label "type:task" --label "needs-triage" --label "area:backend"
 ```
 
 Create a Task directly as a native sub-issue of its Story:
 
 ```shell
-gh issue create --title "[Task] Add connection pooling to the order service" --body-file body.md --label "needs-triage" --parent 12
+gh issue create --title "add connection pooling to the order service" --body-file body.md --label "type:task" --label "needs-triage" --parent 12
 ```
 
 Link an existing Task to its Story as a native sub-issue. Either direction works:
