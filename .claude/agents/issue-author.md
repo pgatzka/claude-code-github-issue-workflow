@@ -30,4 +30,4 @@ If any decision is unresolved, stop. Return the list of decisions, each with a r
 
 ## Return
 
-Return, in this order: the title with the type prefix from the form, `[Story] `, `[Task] `, or `[Bug] `; the full issue body; the proposed labels, drawn only from `labels.md`, always including `needs-triage`; and, if the needed area label is not in the allowed list, a proposed area label with a one-line reason, clearly marked as needing confirmation. Do not create anything.
+Return, in this order: the title, all lowercase and written like a commit subject, with no type prefix; the full issue body; the proposed labels, drawn only from `labels.md`, always including the matching type label, `type:story`, `type:task`, or `type:bug`, and `needs-triage`; and, if the needed area label is not in the allowed list, a proposed area label with a one-line reason, clearly marked as needing confirmation. Do not create anything.
