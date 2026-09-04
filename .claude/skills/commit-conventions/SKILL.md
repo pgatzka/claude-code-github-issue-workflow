@@ -7,7 +7,7 @@ description: Use when committing, writing a commit message, deciding how to spli
 
 ## When to commit
 
-Commit only when asked. Never commit, push, or open a pull request as a side effect of finishing work.
+Commit only when asked. Working on an issue through `/work-on-issue` is asking: its outcome is a review-ready pull request, so it commits, pushes its branch, and opens the pull request. Outside that, never commit, push, or open a pull request as a side effect of finishing work.
 
 ## One commit per logical change
 
@@ -31,7 +31,7 @@ A commit message is short but explanatory. Add a body when the subject cannot ca
 
 ## Pull request description
 
-The commits are the record of what was done. A pull request description does not repeat them, and it is never a long account of the work. Write one only when the commit messages leave something unsaid that a reviewer needs: the reason for the change as a whole, a decision that spans several commits, a manual step to take after merging, or what to look at first. When the commit messages already say everything, leave the description at a single line naming the issue, such as `closes #42`.
+The pull request title is the issue title. The commits are the record of what was done. A pull request description does not repeat them, and it is never a long account of the work. Write one only when the commit messages leave something unsaid that a reviewer needs: the reason for the change as a whole, a decision that spans several commits, a manual step to take after merging, or what to look at first. When the commit messages already say everything, leave the description at a single line naming the issue, such as `closes #42`.
 
 ## Example
 

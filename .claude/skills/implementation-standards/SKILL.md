@@ -33,6 +33,10 @@ Check off an item only when it is actually true and you have seen it be true. An
 
 Commit only when asked. When you are, follow `.claude/skills/commit-conventions/SKILL.md`: several small commits, one per logical change, with lowercase subjects.
 
+## Review ready
+
+The outcome of implementing an issue is a pull request that is ready to merge after review. That means: every section above holds, the verifier reports no failure, the commits follow `.claude/skills/commit-conventions/SKILL.md`, the branch is up to date with the default branch and merges cleanly, continuous integration passes if the repository has it, and the pull request is not a draft. Anything unverifiable is stated in the pull request description. Nothing is left for the reviewer to finish.
+
 ## When the issue left a decision unmade
 
 If implementation reveals a decision the issue failed to make, stop and ask rather than choosing silently. The issue was not ready. Once the answer is given, update the issue body with it so the decision is recorded where the work is, then continue. The readiness rule is in `.claude/skills/issue-conventions/SKILL.md`.
