@@ -31,6 +31,7 @@ An edit to a rule updates every place it appears.
 - Type label rule, types are identified only by `type:story`, `type:task`, or `type:bug`: `issue-conventions/SKILL.md`, `labels.md`, the `labels` list of each form, `agents/issue-author.md`, `commands/work-on-issue.md`, `commands/split-task.md`.
 - Title rule: `issue-conventions/titles.md` in full, pointed at from `issue-conventions/SKILL.md`; checked in `agents/issue-author.md`, `commands/create-issue.md`, `commands/split-task.md`; shown in every worked example.
 - Commit and pull request rule, small commits, short but explanatory messages, and pull request descriptions that add only what the commits leave unsaid: `commit-conventions/SKILL.md` in full, which also defines the subject style that `titles.md` shares; pointed at from `implementation-standards/SKILL.md` and `commands/work-on-issue.md`.
+- Review-ready rule, implementing an issue ends in a pull request ready to merge after review: `implementation-standards/SKILL.md`; carried out step by step in `commands/work-on-issue.md`; the commit exception for it in `commit-conventions/SKILL.md`.
 - Label taxonomy: `labels.md` only. Other files point at it and never list labels themselves, except the type labels, the always-applied `needs-triage`, and the `needs-information` step in `commands/work-on-issue.md`.
 
 ## Invariants that must survive any edit
@@ -49,7 +50,7 @@ An edit to a rule updates every place it appears.
 
 1. The three issue forms parse as valid YAML and follow GitHub's issue form schema: every body element has a type, a label, and a unique identifier; required fields declare `required: true`; no form has a `title` key; each form's `labels` list holds its type label and `needs-triage`.
 2. Each skeleton heading in `story.md`, `task.md`, and `bug.md` matches the corresponding form's field labels exactly, in the same order.
-3. Every `gh` command recorded in `issue-conventions/SKILL.md` exists in the installed version. Check with `gh issue create --help`, `gh issue edit --help`, `gh issue view --help`, and `gh label list --help`. The sub-issue flags `--parent`, `--add-sub-issue`, and the `parent` and `subIssues` output fields were verified against gh 2.94.0.
+3. Every `gh` command recorded in `issue-conventions/SKILL.md` and `commands/work-on-issue.md` exists in the installed version. Check with `gh issue create --help`, `gh issue edit --help`, `gh issue view --help`, `gh issue develop --help`, `gh pr create --help`, `gh pr checks --help`, and `gh label list --help`. The sub-issue flags `--parent`, `--add-sub-issue`, and the `parent` and `subIssues` output fields were verified against gh 2.94.0.
 4. Nothing inside `.claude` or `.github` mentions `README.md` or `CLAUDE.md`.
 5. No abbreviations were introduced.
 

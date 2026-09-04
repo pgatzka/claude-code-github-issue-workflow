@@ -35,7 +35,7 @@ Full rules and worked examples: [story.md](.claude/skills/issue-conventions/stor
 | Command | What it does | Example |
 | --- | --- | --- |
 | `/create-issue` | Resolves every open decision with you, drafts the issue, shows it, then creates it with labels and native relationships | `/create-issue add rate limiting to the public search endpoint` |
-| `/work-on-issue` | Implements a Task or Bug, writes tests for our own code, runs it, and has a verifier check the definition of done | `/work-on-issue 42` |
+| `/work-on-issue` | Implements a Task or Bug on a branch linked to the issue, writes tests for our own code, has a verifier check the definition of done, and opens a review-ready pull request | `/work-on-issue 42` |
 | `/split-task` | Splits a Task that spans more than one area into one Task per area under the same Story | `/split-task 42` |
 
 ## Rules you will notice in practice
@@ -48,7 +48,8 @@ Full rules and worked examples: [story.md](.claude/skills/issue-conventions/stor
 - One area per Task. Wider work is split, and a Task that cannot be split says why.
 - Stories are never worked on directly. The work happens in their Tasks.
 - Tests cover our own code, never framework or library behavior.
-- Commits are small, one per logical change, with lowercase subjects and short but explanatory messages, and only when you ask. A pull request description adds only what the commits leave unsaid. See [commit-conventions](.claude/skills/commit-conventions/SKILL.md).
+- Commits are small, one per logical change, with lowercase subjects and short but explanatory messages. A pull request description adds only what the commits leave unsaid. See [commit-conventions](.claude/skills/commit-conventions/SKILL.md).
+- Working on an issue ends in a pull request that is ready to merge after review. Outside that, nothing is committed or pushed unless you ask.
 
 The rules in full: [SKILL.md](.claude/skills/issue-conventions/SKILL.md) and [implementation-standards](.claude/skills/implementation-standards/SKILL.md).
 
