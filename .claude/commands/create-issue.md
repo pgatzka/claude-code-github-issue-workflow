@@ -13,6 +13,6 @@ Follow these steps in order. Nothing is drafted and nothing is created while a d
 4. If the work looks like a feature spanning more than one area, delegate to the `issue-splitter` agent and propose a Story with child Tasks, one per area.
 5. Delegate drafting to the `issue-author` agent, one call per issue, passing the type, the request, and the resolved decisions. If it comes back with unresolved decisions, return to step 3 rather than creating anything.
 6. Determine the area from the repository structure and the allowed list in `labels.md`. If a new area label is needed, propose it and wait for confirmation before adding it to `labels.md`.
-7. Check every drafted body: no question, no "Open questions" section, no unmade decision, no relationship written as text, no list of files. Then show the full proposed issue or issue set with titles, bodies, and labels, and ask for confirmation before creating anything.
+7. Check every drafted issue: the title is lowercase with no type prefix, the labels include exactly one type label, and the body has no question, no "Open questions" section, no unmade decision, no relationship written as text, and no list of files. Then show the full proposed issue or issue set with titles, bodies, and labels, and ask for confirmation before creating anything.
 8. On confirmation, using the commands in `SKILL.md`: create the labels that do not yet exist, create the issues, then link each Task to its Story as a native sub-issue. Create the Story first so its number is known.
 9. Report the created issue numbers and links.

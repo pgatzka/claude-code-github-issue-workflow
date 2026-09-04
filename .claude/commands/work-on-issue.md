@@ -12,7 +12,7 @@ Work on GitHub issue $ARGUMENTS.
    ```
 
    Then read `.claude/skills/implementation-standards/SKILL.md` in full.
-2. If the issue is a Story, with the title prefix `[Story]`, do not implement it. List its sub-issues from the `subIssues` field and ask which one to work on. If it has none, offer to create the missing Tasks with `/create-issue`.
+2. Read the type from the labels: `type:story`, `type:task`, or `type:bug`. If the issue has no type label, add the right one after confirming it with the user. If the issue is a Story, do not implement it. List its sub-issues from the `subIssues` field and ask which one to work on. If it has none, offer to create the missing Tasks with `/create-issue`.
 3. If the issue is a Task that clearly spans more than one area, say so and offer to split it with `/split-task` before starting.
 4. If the issue leaves a decision unmade, such as a question, an either-or choice, or an unstated expected behavior, stop and ask rather than choosing silently. Once answered, update the issue body with the answer using `gh issue edit $ARGUMENTS --body-file`, so the decision is recorded where the work is.
 5. If required information is missing, or the problem in a Bug cannot be reproduced, apply the label with `gh issue edit $ARGUMENTS --add-label needs-information`, explain what is missing with `gh issue comment $ARGUMENTS --body`, and stop. Create the label first if it does not exist, using the commands in `.claude/skills/issue-conventions/SKILL.md`.
