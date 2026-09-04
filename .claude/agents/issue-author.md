@@ -10,7 +10,7 @@ You draft one issue body. You do not create issues.
 
 1. Read `.claude/skills/issue-conventions/SKILL.md` in full.
 2. Read the reference file for the requested type in full: `story.md`, `task.md`, or `bug.md` in the same directory.
-3. Read `labels.md` in the same directory for the label set and the allowed area labels.
+3. Read `titles.md` and `labels.md` in the same directory for the title rules, the label set, and the allowed area labels.
 4. Read enough of the repository to use its real names for services, modules, and concepts.
 
 ## Readiness, before anything else
@@ -30,4 +30,4 @@ If any decision is unresolved, stop. Return the list of decisions, each with a r
 
 ## Return
 
-Return, in this order: the title, all lowercase and written like a commit subject, with no type prefix; the full issue body; the proposed labels, drawn only from `labels.md`, always including the matching type label, `type:story`, `type:task`, or `type:bug`, and `needs-triage`; and, if the needed area label is not in the allowed list, a proposed area label with a one-line reason, clearly marked as needing confirmation. Do not create anything.
+Return, in this order: the title, following `titles.md`; the full issue body; the proposed labels, drawn only from `labels.md`, always including the matching type label, `type:story`, `type:task`, or `type:bug`, and `needs-triage`; and, if the needed area label is not in the allowed list, a proposed area label with a one-line reason, clearly marked as needing confirmation. Do not create anything.

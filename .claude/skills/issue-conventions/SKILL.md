@@ -27,13 +27,14 @@ Read the matching file in full before writing any issue of that type. Each holds
 - Story, a new or changed feature described as user-facing behavior: `story.md`
 - Task, one unit of implementation work in one area: `task.md`
 - Bug, unexpected behavior that should be fixed: `bug.md`
+- Titles, for every type: `titles.md`
 
 ## The other universal rules
 
 1. Relationships are real GitHub relationships, never prose. Never write "Parent: #12", "Blocked by #40", "Related to #7", or any similar line in an issue body. Story to Task is a native parent and sub-issue relationship. Blocking is a native blocked-by relationship. The commands below set both.
 2. No issue contains a list of files to change, lines to touch, functions to edit, or a prescribed code structure. What to change is the implementer's decision, not the planner's. If you find yourself writing a path into an issue body, stop.
 3. The type of an issue is identified only by its label: `type:story`, `type:task`, or `type:bug`. Every issue carries exactly one. Titles never carry a prefix or any other type marker.
-4. Titles are written like commit subjects: all lowercase, imperative, one line, no trailing period. For example `add connection pooling to the order service`.
+4. Titles are written like commit subjects: lowercase, one line, no prefix. The full rules and examples are in `titles.md`. Read it before writing any title.
 
 ## Labels
 
