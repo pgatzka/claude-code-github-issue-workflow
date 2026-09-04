@@ -1,6 +1,6 @@
 ---
 name: commit-conventions
-description: Use when committing, writing a commit message, or deciding how to split a change into commits. Defines when to commit, how small a commit is, and the exact subject and body format.
+description: Use when committing, writing a commit message, deciding how to split a change into commits, or writing a pull request description. Defines when to commit, how small a commit is, the exact subject and body format, and what a pull request description may contain.
 ---
 
 # Commit conventions
@@ -28,6 +28,10 @@ Issue titles use the same subject style; the issue side is in `.claude/skills/is
 ## Body
 
 Add a body when the subject cannot carry the reason. Separate it from the subject with one blank line, wrap it at seventy-two characters, and write plain prose that says why the change is made and what it replaces, not what the diff already shows. Reference the issue by number in the body, such as `part of #42`, never in the subject.
+
+## Pull request description
+
+The commits are the record of what was done. A pull request description does not repeat them, and it is never a long account of the work. Write one only when the commit messages leave something unsaid that a reviewer needs: the reason for the change as a whole, a decision that spans several commits, a manual step to take after merging, or what to look at first. When the commit messages already say everything, leave the description at a single line naming the issue, such as `closes #42`.
 
 ## Example
 
