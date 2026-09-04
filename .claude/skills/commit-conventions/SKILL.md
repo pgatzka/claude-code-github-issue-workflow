@@ -27,7 +27,7 @@ Issue titles use the same subject style; the issue side is in `.claude/skills/is
 
 ## Body
 
-Add a body when the subject cannot carry the reason. Separate it from the subject with one blank line, wrap it at seventy-two characters, and write plain prose that says why the change is made and what it replaces, not what the diff already shows. Reference the issue by number in the body, such as `part of #42`, never in the subject.
+A commit message is short but explanatory. Add a body when the subject cannot carry the reason, and keep it to a few sentences: why the change is made and what it replaces, not what the diff already shows and not a narrative of the work. Separate it from the subject with one blank line and wrap it at seventy-two characters. Reference the issue by number in the body, such as `part of #42`, never in the subject.
 
 ## Pull request description
 
