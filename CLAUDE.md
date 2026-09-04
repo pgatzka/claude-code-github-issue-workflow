@@ -28,13 +28,17 @@ An edit to a rule updates every place it appears.
 - No-file-lists rule: `issue-conventions/SKILL.md`, `story.md`, `task.md`, `bug.md`, `agents/issue-author.md`, and the constraints field description in `task.yml`.
 - Single-area rule: `task.md` in full; referenced in `agents/issue-splitter.md`, `commands/split-task.md`, `commands/work-on-issue.md`, `commands/create-issue.md`.
 - Testing rule: `implementation-standards/SKILL.md` in full; referenced in `agents/implementation-verifier.md` and `commands/work-on-issue.md`.
-- Label taxonomy: `labels.md` only. Other files point at it and never list labels themselves, except the always-applied `needs-triage` and the `needs-information` step in `commands/work-on-issue.md`.
+- Type label rule, types are identified only by `type:story`, `type:task`, or `type:bug`: `issue-conventions/SKILL.md`, `labels.md`, the `labels` list of each form, `agents/issue-author.md`, `commands/work-on-issue.md`, `commands/split-task.md`.
+- Title rule, lowercase like a commit subject with no prefix: `issue-conventions/SKILL.md`; checked in `agents/issue-author.md`, `commands/create-issue.md`, `commands/split-task.md`; shown in every worked example.
+- Label taxonomy: `labels.md` only. Other files point at it and never list labels themselves, except the type labels, the always-applied `needs-triage`, and the `needs-information` step in `commands/work-on-issue.md`.
 
 ## Invariants that must survive any edit
 
 - No open questions anywhere: no form field, skeleton section, or command step that lets an issue be created with a decision unmade.
 - No relationships as text. No form field, skeleton, or agent output for a parent, a blocker, or a related issue.
 - No file lists in issue bodies.
+- Issue type is carried by the type label only. No form sets a title, and no file identifies a type by a title prefix.
+- Titles are lowercase.
 - The label set stays closed, and area labels are the only per-project part.
 - Labels are created on demand, never preemptively.
 - No abbreviations in any file, including labels, headings, and command names.
@@ -42,7 +46,7 @@ An edit to a rule updates every place it appears.
 
 ## How to verify a change
 
-1. The three issue forms parse as valid YAML and follow GitHub's issue form schema: every body element has a type, a label, and a unique identifier; required fields declare `required: true`.
+1. The three issue forms parse as valid YAML and follow GitHub's issue form schema: every body element has a type, a label, and a unique identifier; required fields declare `required: true`; no form has a `title` key; each form's `labels` list holds its type label and `needs-triage`.
 2. Each skeleton heading in `story.md`, `task.md`, and `bug.md` matches the corresponding form's field labels exactly, in the same order.
 3. Every `gh` command recorded in `issue-conventions/SKILL.md` exists in the installed version. Check with `gh issue create --help`, `gh issue edit --help`, `gh issue view --help`, and `gh label list --help`. The sub-issue flags `--parent`, `--add-sub-issue`, and the `parent` and `subIssues` output fields were verified against gh 2.94.0.
 4. Nothing inside `.claude` or `.github` mentions `README.md` or `CLAUDE.md`.

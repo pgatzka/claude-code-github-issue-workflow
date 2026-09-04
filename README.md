@@ -43,6 +43,8 @@ Full rules and worked examples: [story.md](.claude/skills/issue-conventions/stor
 - No open questions. If a decision is unresolved, you are asked before anything is drafted. An unknown cause is not a decision and never blocks a Bug.
 - Relationships are native. Story to Task is a real sub-issue link, blocking is a real blocked-by link, and no body ever says "Parent: #12".
 - No file lists. An issue says what must be true afterwards, never which files to touch.
+- Types are labels. An issue is a Story, Task, or Bug because it carries `type:story`, `type:task`, or `type:bug`, never because of its title.
+- Titles are lowercase, written like commit subjects.
 - One area per Task. Wider work is split, and a Task that cannot be split says why.
 - Stories are never worked on directly. The work happens in their Tasks.
 - Tests cover our own code, never framework or library behavior.
@@ -54,6 +56,7 @@ The rules in full: [SKILL.md](.claude/skills/issue-conventions/SKILL.md) and [im
 The set is closed. Labels are created on demand with a fixed color and description, never all at once.
 
 ```text
+type:story    type:task        type:bug
 priority:low  priority:medium  priority:high  priority:urgent
 size:small    size:medium      size:large
 area:<name>
@@ -66,4 +69,5 @@ Area labels are the only per-project part. Edit the allowed list in [labels.md](
 ## What to adjust after copying
 
 1. Replace the area label list in `.claude/skills/issue-conventions/labels.md` with the real parts of your codebase, fewer than ten.
-2. Nothing else. The forms, commands, agents, and skills contain no project assumptions.
+2. Optionally create the four labels the forms apply, the three type labels and `needs-triage`, so issues filed through the browser carry them from the first one. GitHub skips a form label that does not exist yet; the commands create labels on demand either way.
+3. Nothing else. The forms, commands, agents, and skills contain no project assumptions.
