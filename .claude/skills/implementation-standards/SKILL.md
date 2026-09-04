@@ -29,6 +29,10 @@ If a change genuinely has nothing of your own to test, such as bumping a depende
 
 Check off an item only when it is actually true and you have seen it be true. An item you could not verify stays unchecked, and you say why. For a Bug, the expected behavior in the issue is the definition of done.
 
+## Commits, when you are asked to commit
+
+Commit only when asked. When you are, make several small commits, one per logical change, such as one for the code, one for its tests, and one for documentation. Never squash a whole issue into a single commit. Each subject line is lowercase, imperative, one line, with no trailing period, the same style as issue titles.
+
 ## When the issue left a decision unmade
 
 If implementation reveals a decision the issue failed to make, stop and ask rather than choosing silently. The issue was not ready. Once the answer is given, update the issue body with it so the decision is recorded where the work is, then continue. The readiness rule is in `.claude/skills/issue-conventions/SKILL.md`.
