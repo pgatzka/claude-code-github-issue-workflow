@@ -1,0 +1,57 @@
+name: Bug
+description: Behavior that is unexpected and should be fixed.
+title: "[Bug] "
+labels:
+  - needs-triage
+body:
+  - type: textarea
+    id: what-is-wrong
+    attributes:
+      label: What is wrong
+      description: One or two sentences on what is broken, as noticed by whoever is filing.
+    validations:
+      required: true
+  - type: textarea
+    id: steps-to-reproduce
+    attributes:
+      label: Steps to reproduce
+      description: Exact steps that make the problem appear, starting from a known state.
+      value: |
+        1.
+        2.
+        3.
+    validations:
+      required: true
+  - type: textarea
+    id: expected-behavior
+    attributes:
+      label: Expected behavior
+      description: State it concretely, as the behavior a fix must produce.
+    validations:
+      required: true
+  - type: textarea
+    id: actual-behavior
+    attributes:
+      label: Actual behavior
+      description: What happens instead, exactly as observed.
+    validations:
+      required: true
+  - type: input
+    id: environment
+    attributes:
+      label: Environment
+      description: Version, branch or commit, and whether the problem occurred locally, in staging, or in production.
+      placeholder: 2.3.0, main at 3f9c2a1, staging
+    validations:
+      required: true
+  - type: textarea
+    id: logs-or-stack-trace
+    attributes:
+      label: Logs or stack trace
+      description: Paste relevant output without editing it.
+      render: shell
+  - type: textarea
+    id: suspected-cause
+    attributes:
+      label: Suspected cause
+      description: A non-binding hypothesis; not required to file.

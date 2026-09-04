@@ -1,0 +1,29 @@
+name: Task
+description: One unit of implementation work in one area, with every decision already made.
+title: "[Task] "
+labels:
+  - needs-triage
+body:
+  - type: textarea
+    id: description
+    attributes:
+      label: Description
+      description: What needs to be built or changed, technically, including the decisions already made such as the chosen library or approach.
+    validations:
+      required: true
+  - type: textarea
+    id: definition-of-done
+    attributes:
+      label: Definition of done
+      description: Verifiable technical outcomes.
+      value: |
+        - [ ]
+        - [ ]
+        - [ ]
+    validations:
+      required: true
+  - type: textarea
+    id: constraints
+    attributes:
+      label: Constraints
+      description: What the implementation must respect, such as backward compatibility or a performance target; not the place for file names or a prescribed approach.

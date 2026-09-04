@@ -1,0 +1,30 @@
+name: Story
+description: A new feature or a change to an existing feature, described as user-facing behavior.
+title: "[Story] "
+labels:
+  - needs-triage
+body:
+  - type: textarea
+    id: user-story
+    attributes:
+      label: User story
+      description: One sentence naming the role, the capability, and the outcome.
+      value: "As a <role>, I want <capability>, so that <outcome>."
+    validations:
+      required: true
+  - type: textarea
+    id: acceptance-criteria
+    attributes:
+      label: Acceptance criteria
+      description: Observable behavior, not implementation.
+      value: |
+        - [ ]
+        - [ ]
+        - [ ]
+    validations:
+      required: true
+  - type: textarea
+    id: out-of-scope
+    attributes:
+      label: Out of scope
+      description: What this Story deliberately does not cover.
