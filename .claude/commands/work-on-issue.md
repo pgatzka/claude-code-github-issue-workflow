@@ -16,10 +16,10 @@ Work on GitHub issue $ARGUMENTS. The outcome is a pull request that is ready to 
 3. If the issue is a Task that clearly spans more than one area, say so and offer to split it with `/split-task` before starting.
 4. If the issue leaves a decision unmade, such as a question, an either-or choice, or an unstated expected behavior, stop and ask rather than choosing silently. Once answered, update the issue body with the answer using `gh issue edit $ARGUMENTS --body-file`, so the decision is recorded where the work is.
 5. If required information is missing, or the problem in a Bug cannot be reproduced, apply the label with `gh issue edit $ARGUMENTS --add-label needs-information`, explain what is missing with `gh issue comment $ARGUMENTS --body`, and stop. Create the label first if it does not exist, using the commands in `.claude/skills/issue-conventions/SKILL.md`.
-6. Create a branch linked to the issue, from the default branch, named `<type>-<issue number>-<short title>` with hyphens only and no slash, such as `task-42-add-connection-pooling`:
+6. Create a branch linked to the issue, from the default branch. The branch name is the issue number followed by the issue title, lowercase, with every space replaced by a hyphen and no slash or type marker anywhere, such as `42-add-connection-pooling-to-the-order-service`:
 
    ```shell
-   gh issue develop $ARGUMENTS --checkout --name task-42-add-connection-pooling
+   gh issue develop $ARGUMENTS --checkout --name 42-add-connection-pooling-to-the-order-service
    ```
 
 7. Implement the change. Then write tests for our own behavior only, as the standards describe. Then verify the code works by actually running or exercising it, and note how.
