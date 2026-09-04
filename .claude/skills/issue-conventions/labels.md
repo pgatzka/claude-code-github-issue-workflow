@@ -2,6 +2,16 @@
 
 The label set below is closed. No label outside it may ever be created or applied. Labels are created on demand, never all at once: before applying a label, check whether it exists in the repository and create it if it does not, using the commands in `SKILL.md`. Give every label the color and description from this file when creating it. Each prefix family has its own color range so the label list stays scannable.
 
+## Type, teal range
+
+| Label | Color | Description |
+| --- | --- | --- |
+| type:story | 006b75 | A new or changed feature described as user-facing behavior |
+| type:task | 1d9c8f | One unit of implementation work in one area |
+| type:bug | 7fd1c8 | Unexpected behavior that should be fixed |
+
+Every issue carries exactly one type label. It is the only way an issue's type is identified; titles never carry a prefix or any other type marker. The issue forms apply the type label and needs-triage on creation. GitHub skips a label a form applies that does not yet exist, so an issue filed through the browser before the label has been created gets it at triage.
+
 ## Priority, red range
 
 | Label | Color | Description |
