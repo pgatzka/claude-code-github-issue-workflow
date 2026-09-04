@@ -1,7 +1,7 @@
 name: Task
 description: One unit of implementation work in one area, with every decision already made.
-title: "[Task] "
 labels:
+  - type:task
   - needs-triage
 body:
   - type: textarea

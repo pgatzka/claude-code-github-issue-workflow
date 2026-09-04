@@ -1,7 +1,7 @@
 name: Story
 description: A new feature or a change to an existing feature, described as user-facing behavior.
-title: "[Story] "
 labels:
+  - type:story
   - needs-triage
 body:
   - type: textarea
